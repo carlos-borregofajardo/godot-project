@@ -1,6 +1,6 @@
 extends Area2D
 
-@onready var game_manager: Node = %GameManager
+@onready var game_manager: Node = get_tree().current_scene.find_child("GameManager", true, false)
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 
 
