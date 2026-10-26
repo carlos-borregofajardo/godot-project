@@ -1,4 +1,5 @@
 extends CharacterBody2D
+@onready var game_manager: Node = %GameManager
 
 
 const SPEED = 130.0
@@ -33,7 +34,7 @@ func _physics_process(delta: float) -> void:
 	else:
 		animated_sprite_2d.play("jump")
 	if direction:
-		velocity.x = direction * SPEED
+		velocity.x = direction * SPEED * (1.0 + game_manager.score * 0.05)
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
