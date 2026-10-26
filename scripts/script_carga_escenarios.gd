@@ -2,7 +2,7 @@ extends Node
 
 @export var padre: Node2D
 
-var Escenarios: Array[String] = ["res://scenes/Escenario_1.tscn", "res://scenes/Escenario_2.tscn"]
+var Escenarios: Array[String] = ["res://scenes/Escenario_1.tscn", "res://scenes/Escenario_2.tscn", "res://scenes/Escenario_3.tscn"]
 var Precarga_Escenarios: Array[PackedScene] = []
 var instancia
 
