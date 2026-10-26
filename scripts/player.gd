@@ -7,6 +7,7 @@ const JUMP_VELOCITY = -300.0
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
+@onready var label_vel_jugador: Label = $"../../UI/CanvasLayer/LabelVelJugador"
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -35,6 +36,7 @@ func _physics_process(delta: float) -> void:
 		animated_sprite_2d.play("jump")
 	if direction:
 		velocity.x = direction * SPEED * (1.0 + game_manager.score * 0.05)
+		label_vel_jugador.text = str(abs(velocity.x)) + " max player speed."
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
