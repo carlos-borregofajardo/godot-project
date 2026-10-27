@@ -2,9 +2,9 @@ extends Node
 
 
 # Contenedores de la escena principal
-@onready var mapa_principal: TileMapLayer = $"../../Escenario/Mapa/Mid"
-@onready var fondo: TileMapLayer = $"../../Escenario/Mapa/FondoEscenario"
-@onready var padre: Node2D = $"../../Escenario/Mapa/PadreEscenarios"
+@onready var mapa_principal: TileMapLayer = $"../../Escenario/Mapa2/Mid"
+@onready var fondo: TileMapLayer = $"../../Escenario/Mapa2/FondoEscenario"
+@onready var padre: Node2D = $"../../Escenario/Mapa2/PadreEscenarios"
 @onready var plataformas_destino: Node2D = $"../../Escenario/Elementos/Platforms"
 @onready var monedas_destino: Node2D = $"../../Escenario/Elementos/Coins"
 @onready var interruptores_destino: Node2D = $"../../Escenario/Elementos/Interruptores"
@@ -53,7 +53,7 @@ func transferir_objetos(origen: Node2D, destino: Node2D) -> void:
 
 	for objeto in origen.get_children():
 		# Guardar su posición global antes de cambiar de padre.
-		var posicion_global := objeto.global_position
+		var posicion_global: Vector2 = objeto.global_position
 
 		origen.remove_child(objeto)
 		destino.add_child(objeto)
@@ -77,12 +77,8 @@ func cargar_escena(posicion: Vector2) -> void:
 	instancia.global_position = posicion
 
 	# Mapas de la plantilla.
-	var mapa_nuevo: TileMapLayer = instancia.get_node_or_null(
-        "Mapa/Escenario"
-	)
-	var fondo_nuevo: TileMapLayer = instancia.get_node_or_null(
-        "Mapa/Fondo"
-	)
+	var mapa_nuevo: TileMapLayer = instancia.get_node_or_null("Mapa/Mid")
+	var fondo_nuevo: TileMapLayer = instancia.get_node_or_null("Mapa/Background")
 
 	# Copiar ambos mapas a sus destinos.
 	copiar_tiles(mapa_nuevo, mapa_principal)
@@ -92,22 +88,10 @@ func cargar_escena(posicion: Vector2) -> void:
 	var elementos: Node = instancia.get_node_or_null("Elementos")
 
 	if elementos:
-		transferir_objetos(
-			elementos.get_node_or_null("Platforms"),
-			plataformas_destino
-		)
-		transferir_objetos(
-			elementos.get_node_or_null("Coins"),
-			monedas_destino
-		)
-		transferir_objetos(
-			elementos.get_node_or_null("Interruptores"),
-			interruptores_destino
-		)
-		transferir_objetos(
-			elementos.get_node_or_null("Enemy"),
-			enemigos_destino
-		)
+		transferir_objetos(elementos.get_node_or_null("Platforms"),plataformas_destino)
+		transferir_objetos(elementos.get_node_or_null("Coins"),monedas_destino)
+		transferir_objetos(elementos.get_node_or_null("Interruptores"),interruptores_destino)
+		transferir_objetos(elementos.get_node_or_null("Enemys"),enemigos_destino)
 
 	# Destruir la plantilla temporal y sus nodos vacíos.
 	instancia.queue_free()
