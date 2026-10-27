@@ -14,7 +14,8 @@ var Escenarios: Array[String] = [
 	"res://scenes/Escenario_1.tscn",
 	"res://scenes/Escenario_2.tscn",
 	"res://scenes/Escenario_3.tscn",
-    "res://scenes/Escenario_4.tscn"
+	"res://scenes/Escenario_4.tscn",
+    "res://scenes/Escenario_5.tscn"
 ]
 
 var Precarga_Escenarios: Array[PackedScene] = []
