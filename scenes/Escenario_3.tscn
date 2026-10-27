@@ -506,31 +506,39 @@ tile_set = SubResource("TileSet_l8oat")
 
 [node name="Platforms" type="Node2D" parent="Elementos" unique_id=1513717364]
 
-[node name="Platform" parent="Elementos/Platforms" unique_id=107136770 instance=ExtResource("5_0jjki")]
+[node name="PosicionInicial Plataforma1" type="Node2D" parent="Elementos/Platforms" unique_id=542890328]
+
+[node name="Platform" parent="Elementos/Platforms/PosicionInicial Plataforma1" unique_id=107136770 instance=ExtResource("5_0jjki")]
 position = Vector2(141, 29)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Elementos/Platforms/Platform" unique_id=582089502]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Elementos/Platforms/PosicionInicial Plataforma1/Platform" unique_id=582089502]
 libraries/ = SubResource("AnimationLibrary_heimb")
 autoplay = &"movimiento"
 
-[node name="Platform2" parent="Elementos/Platforms" unique_id=359059735 instance=ExtResource("5_0jjki")]
+[node name="PosicionInicial Plataforma2" type="Node2D" parent="Elementos/Platforms" unique_id=241487245]
+
+[node name="Platform2" parent="Elementos/Platforms/PosicionInicial Plataforma2" unique_id=359059735 instance=ExtResource("5_0jjki")]
 position = Vector2(205, 29)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Elementos/Platforms/Platform2" unique_id=1845643647]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Elementos/Platforms/PosicionInicial Plataforma2/Platform2" unique_id=1845643647]
 libraries/ = SubResource("AnimationLibrary_y10sr")
 autoplay = &"movimiento"
 
-[node name="Platform3" parent="Elementos/Platforms" unique_id=1901441420 instance=ExtResource("5_0jjki")]
+[node name="PosicionInicial Plataforma3" type="Node2D" parent="Elementos/Platforms" unique_id=423937989]
+
+[node name="Platform3" parent="Elementos/Platforms/PosicionInicial Plataforma3" unique_id=1901441420 instance=ExtResource("5_0jjki")]
 position = Vector2(381, 30)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Elementos/Platforms/Platform3" unique_id=1286360993]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Elementos/Platforms/PosicionInicial Plataforma3/Platform3" unique_id=1286360993]
 libraries/ = SubResource("AnimationLibrary_ro4ov")
 autoplay = &"movimiento"
 
-[node name="Platform4" parent="Elementos/Platforms" unique_id=232066345 instance=ExtResource("5_0jjki")]
+[node name="PosicionInicial Plataforma4" type="Node2D" parent="Elementos/Platforms" unique_id=184673980]
+
+[node name="Platform4" parent="Elementos/Platforms/PosicionInicial Plataforma4" unique_id=232066345 instance=ExtResource("5_0jjki")]
 position = Vector2(445, 29)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Elementos/Platforms/Platform4" unique_id=1628285055]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Elementos/Platforms/PosicionInicial Plataforma4/Platform4" unique_id=1628285055]
 libraries/ = SubResource("AnimationLibrary_xuufn")
 autoplay = &"movimiento"
 
