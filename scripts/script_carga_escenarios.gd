@@ -15,7 +15,8 @@ var Escenarios: Array[String] = [
 	"res://scenes/Escenario_2.tscn",
 	"res://scenes/Escenario_3.tscn",
 	"res://scenes/Escenario_4.tscn",
-    "res://scenes/Escenario_5.tscn"
+	"res://scenes/Escenario_5.tscn",
+    "res://scenes/Escenario_6.tscn"
 ]
 
 var Precarga_Escenarios: Array[PackedScene] = []
@@ -61,7 +62,23 @@ func transferir_objetos(origen: Node2D, destino: Node2D) -> void:
 		# Mantener su posición en el mundo.
 		objeto.global_position = posicion_global
 
+func comprobar_monedas() -> void:
+	for moneda in monedas_destino.get_children():
+		var celda := mapa_principal.local_to_map(mapa_principal.to_local(moneda.global_position))
 
+		# Si hay un tile en esa celda, destruir la moneda.
+		if mapa_principal.get_cell_source_id(celda) != -1:
+			moneda.queue_free()
+
+
+func comprobar_interruptores() -> void:
+	for interruptor in interruptores_destino.get_children():
+		var celda := mapa_principal.local_to_map(mapa_principal.to_local(interruptor.global_position))
+
+		# Si hay un tile en esa celda, destruirlo.
+		if mapa_principal.get_cell_source_id(celda) != -1:
+			mapa_principal.erase_cell(celda)
+			
 func cargar_escena(posicion: Vector2) -> void:
 	if Precarga_Escenarios.is_empty():
 		return
@@ -92,6 +109,7 @@ func cargar_escena(posicion: Vector2) -> void:
 		transferir_objetos(elementos.get_node_or_null("Coins"),monedas_destino)
 		transferir_objetos(elementos.get_node_or_null("Interruptores"),interruptores_destino)
 		transferir_objetos(elementos.get_node_or_null("Enemys"),enemigos_destino)
-
+		comprobar_monedas()
+		comprobar_interruptores()
 	# Destruir la plantilla temporal y sus nodos vacíos.
 	instancia.queue_free()
