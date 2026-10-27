@@ -487,14 +487,16 @@ _data = {
 
 [node name="Node2D" type="Node2D" unique_id=1542232036]
 
-[node name="Background" type="TileMapLayer" parent="." unique_id=1857839748]
+[node name="Mapa" type="Node2D" parent="." unique_id=1431999317]
+
+[node name="Background" type="TileMapLayer" parent="Mapa" unique_id=1857839748]
 modulate = Color(0.46618134, 0.46618062, 0.4661808, 1)
 use_parent_material = true
 position = Vector2(320, 64)
 tile_set = SubResource("TileSet_2igtq")
 collision_enabled = false
 
-[node name="Mid" type="TileMapLayer" parent="." unique_id=929168481]
+[node name="Mid" type="TileMapLayer" parent="Mapa" unique_id=929168481]
 use_parent_material = true
 position = Vector2(320, 64)
 tile_map_data = PackedByteArray("AADt//z/AAAEAAAAAADu//z/AAAEAAAAAADv//z/AAAEAAAAAADw//z/AAAEAAAAAADx//z/AAAEAAAAAAD8//z/AAAEAAAAAAD9//z/AAAEAAAAAAD+//z/AAAEAAAAAAD///z/AAAEAAAAAAAAAPz/AAAEAAAAAAALAPz/AAAEAAAAAAAMAPz/AAAEAAAAAAANAPz/AAAEAAAAAAAOAPz/AAAEAAAAAAAPAPz/AAAEAAAAAAAQAPz/AAAEAAAAAAALAP3/AAAEAAEAAAAMAP3/AAAFAAEAAAANAP3/AAAEAAEAAAAOAP3/AAAEAAEAAAAPAP3/AAAEAAEAAAAQAP3/AAAEAAEAAAAAAP3/AAAEAAEAAAD///3/AAAFAAEAAAD+//3/AAAEAAEAAAD9//3/AAAEAAEAAAD8//3/AAAEAAEAAADt//3/AAAEAAEAAADu//3/AAAFAAAAAADv//3/AAAEAAEAAADw//3/AAAEAAEAAADx//3/AAAEAAEAAAD9//n/AAAFAAMAAAD9//r/AAAFAAQAAAD9//v/AAAFAAUAAADx//r/AAAFAAMAAADx//v/AAAFAAUAAADs//z/AAAEAAAAAADs//3/AAAEAAEAAAA=")
