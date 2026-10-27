@@ -32,13 +32,12 @@ func copiar_tiles(origen: TileMapLayer, destino: TileMapLayer) -> void:
 		return
 
 	for celda in origen.get_used_cells():
-		var posicion_global := origen.to_global(
-			origen.map_to_local(celda)
-		)
-		var celda_destino := destino.local_to_map(
-			destino.to_local(posicion_global)
-		)
-
+		var posicion_global := origen.to_global(origen.map_to_local(celda))
+		var celda_destino := destino.local_to_map(destino.to_local(posicion_global))
+		
+		# Borrar el tile anterior de esa celda.
+		destino.erase_cell(celda_destino)
+		
 		destino.set_cell(
 			celda_destino,
 			origen.get_cell_source_id(celda),
