@@ -6,4 +6,4 @@ extends Node2D
 @warning_ignore("unused_parameter")
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	animation_player.play("Activación")
-	controlador.cargar_escena(Vector2(global_position.x + 24, global_position.y + +40))
+	controlador.cargar_escena.call_deferred(Vector2(global_position.x + 24, global_position.y + +40))
