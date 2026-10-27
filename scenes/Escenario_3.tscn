@@ -487,74 +487,80 @@ _data = {
 
 [node name="Node2D" type="Node2D" unique_id=1542232036]
 
-[node name="BackgroundA" type="TileMapLayer" parent="." unique_id=1857839748]
+[node name="Background" type="TileMapLayer" parent="." unique_id=1857839748]
 modulate = Color(0.46618134, 0.46618062, 0.4661808, 1)
 use_parent_material = true
-position = Vector2(317, 89)
+position = Vector2(320, 64)
 tile_set = SubResource("TileSet_2igtq")
 collision_enabled = false
 
 [node name="Mid" type="TileMapLayer" parent="." unique_id=929168481]
 use_parent_material = true
-position = Vector2(317, 89)
-tile_map_data = PackedByteArray("AADt//z/AAAEAAAAAADu//z/AAAEAAAAAADv//z/AAAEAAAAAADw//z/AAAEAAAAAADx//z/AAAEAAAAAAD8//z/AAAEAAAAAAD9//z/AAAEAAAAAAD+//z/AAAEAAAAAAD///z/AAAEAAAAAAAAAPz/AAAEAAAAAAALAPz/AAAEAAAAAAAMAPz/AAAEAAAAAAANAPz/AAAEAAAAAAAOAPz/AAAEAAAAAAAPAPz/AAAEAAAAAAAQAPz/AAAEAAAAAAALAP3/AAAEAAEAAAAMAP3/AAAFAAEAAAANAP3/AAAEAAEAAAAOAP3/AAAEAAEAAAAPAP3/AAAEAAEAAAAQAP3/AAAEAAEAAAAAAP3/AAAEAAEAAAD///3/AAAFAAEAAAD+//3/AAAEAAEAAAD9//3/AAAEAAEAAAD8//3/AAAEAAEAAADt//3/AAAEAAEAAADu//3/AAAFAAAAAADv//3/AAAEAAEAAADw//3/AAAEAAEAAADx//3/AAAEAAEAAAD9//n/AAAFAAMAAAD9//r/AAAFAAQAAAD9//v/AAAFAAUAAADx//r/AAAFAAMAAADx//v/AAAFAAUAAAA=")
+position = Vector2(320, 64)
+tile_map_data = PackedByteArray("AADt//z/AAAEAAAAAADu//z/AAAEAAAAAADv//z/AAAEAAAAAADw//z/AAAEAAAAAADx//z/AAAEAAAAAAD8//z/AAAEAAAAAAD9//z/AAAEAAAAAAD+//z/AAAEAAAAAAD///z/AAAEAAAAAAAAAPz/AAAEAAAAAAALAPz/AAAEAAAAAAAMAPz/AAAEAAAAAAANAPz/AAAEAAAAAAAOAPz/AAAEAAAAAAAPAPz/AAAEAAAAAAAQAPz/AAAEAAAAAAALAP3/AAAEAAEAAAAMAP3/AAAFAAEAAAANAP3/AAAEAAEAAAAOAP3/AAAEAAEAAAAPAP3/AAAEAAEAAAAQAP3/AAAEAAEAAAAAAP3/AAAEAAEAAAD///3/AAAFAAEAAAD+//3/AAAEAAEAAAD9//3/AAAEAAEAAAD8//3/AAAEAAEAAADt//3/AAAEAAEAAADu//3/AAAFAAAAAADv//3/AAAEAAEAAADw//3/AAAEAAEAAADx//3/AAAEAAEAAAD9//n/AAAFAAMAAAD9//r/AAAFAAQAAAD9//v/AAAFAAUAAADx//r/AAAFAAMAAADx//v/AAAFAAUAAADs//z/AAAEAAAAAADs//3/AAAEAAEAAAA=")
 tile_set = SubResource("TileSet_l8oat")
 
-[node name="Monedas" type="Node2D" parent="." unique_id=1898592024]
+[node name="Elementos" type="Node2D" parent="." unique_id=1447164261]
 
-[node name="coin" parent="Monedas" unique_id=882268808 instance=ExtResource("3_f57jn")]
-position = Vector2(141, -29)
+[node name="Platforms" type="Node2D" parent="Elementos" unique_id=1513717364]
 
-[node name="coin2" parent="Monedas" unique_id=407803531 instance=ExtResource("3_f57jn")]
-position = Vector2(141, 63)
-
-[node name="coin3" parent="Monedas" unique_id=1232782455 instance=ExtResource("3_f57jn")]
-position = Vector2(205.245, -29)
-
-[node name="coin4" parent="Monedas" unique_id=468421385 instance=ExtResource("3_f57jn")]
-position = Vector2(205.245, 63)
-
-[node name="coin5" parent="Monedas" unique_id=1998398131 instance=ExtResource("3_f57jn")]
-position = Vector2(380.945, -29)
-
-[node name="coin6" parent="Monedas" unique_id=1354132558 instance=ExtResource("3_f57jn")]
-position = Vector2(380.945, 63)
-
-[node name="coin7" parent="Monedas" unique_id=959800393 instance=ExtResource("3_f57jn")]
-position = Vector2(445.67, -29)
-
-[node name="coin8" parent="Monedas" unique_id=1625162257 instance=ExtResource("3_f57jn")]
-position = Vector2(445.67, 63)
-
-[node name="Interruptor" parent="." unique_id=1416980535 instance=ExtResource("4_3crk8")]
-position = Vector2(581, -16)
-
-[node name="plataformas" type="Node2D" parent="." unique_id=1700724635]
-
-[node name="Platform" parent="plataformas" unique_id=107136770 instance=ExtResource("5_0jjki")]
+[node name="Platform" parent="Elementos/Platforms" unique_id=107136770 instance=ExtResource("5_0jjki")]
 position = Vector2(141, 29)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="plataformas/Platform" unique_id=582089502]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Elementos/Platforms/Platform" unique_id=582089502]
 libraries/ = SubResource("AnimationLibrary_heimb")
 autoplay = &"movimiento"
 
-[node name="Platform2" parent="plataformas" unique_id=359059735 instance=ExtResource("5_0jjki")]
+[node name="Platform2" parent="Elementos/Platforms" unique_id=359059735 instance=ExtResource("5_0jjki")]
 position = Vector2(205, 29)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="plataformas/Platform2" unique_id=1845643647]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Elementos/Platforms/Platform2" unique_id=1845643647]
 libraries/ = SubResource("AnimationLibrary_y10sr")
 autoplay = &"movimiento"
 
-[node name="Platform3" parent="plataformas" unique_id=1901441420 instance=ExtResource("5_0jjki")]
+[node name="Platform3" parent="Elementos/Platforms" unique_id=1901441420 instance=ExtResource("5_0jjki")]
 position = Vector2(381, 30)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="plataformas/Platform3" unique_id=1286360993]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Elementos/Platforms/Platform3" unique_id=1286360993]
 libraries/ = SubResource("AnimationLibrary_ro4ov")
 autoplay = &"movimiento"
 
-[node name="Platform4" parent="plataformas" unique_id=232066345 instance=ExtResource("5_0jjki")]
+[node name="Platform4" parent="Elementos/Platforms" unique_id=232066345 instance=ExtResource("5_0jjki")]
 position = Vector2(445, 29)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="plataformas/Platform4" unique_id=1628285055]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Elementos/Platforms/Platform4" unique_id=1628285055]
 libraries/ = SubResource("AnimationLibrary_xuufn")
 autoplay = &"movimiento"
+
+[node name="Coins" type="Node2D" parent="Elementos" unique_id=1213186699]
+
+[node name="coin" parent="Elementos/Coins" unique_id=882268808 instance=ExtResource("3_f57jn")]
+position = Vector2(141, -29)
+
+[node name="coin2" parent="Elementos/Coins" unique_id=407803531 instance=ExtResource("3_f57jn")]
+position = Vector2(141, 63)
+
+[node name="coin3" parent="Elementos/Coins" unique_id=1232782455 instance=ExtResource("3_f57jn")]
+position = Vector2(205.245, -29)
+
+[node name="coin4" parent="Elementos/Coins" unique_id=468421385 instance=ExtResource("3_f57jn")]
+position = Vector2(205.245, 63)
+
+[node name="coin5" parent="Elementos/Coins" unique_id=1998398131 instance=ExtResource("3_f57jn")]
+position = Vector2(380.945, -29)
+
+[node name="coin6" parent="Elementos/Coins" unique_id=1354132558 instance=ExtResource("3_f57jn")]
+position = Vector2(380.945, 63)
+
+[node name="coin7" parent="Elementos/Coins" unique_id=959800393 instance=ExtResource("3_f57jn")]
+position = Vector2(445.67, -29)
+
+[node name="coin8" parent="Elementos/Coins" unique_id=1625162257 instance=ExtResource("3_f57jn")]
+position = Vector2(445.67, 63)
+
+[node name="Interruptores" type="Node2D" parent="Elementos" unique_id=726277724]
+
+[node name="Interruptor" parent="Elementos/Interruptores" unique_id=1416980535 instance=ExtResource("4_3crk8")]
+position = Vector2(584, -40)
+
+[node name="Enemys" type="Node2D" parent="Elementos" unique_id=438732375]
