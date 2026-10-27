@@ -3,8 +3,8 @@ extends Node2D
 
 @export var ancho_mapa: float = 1632.0
 
-@onready var mapa_a: TileMapLayer = $BackgroundA
-@onready var mapa_b: TileMapLayer = $BackgroundB
+@onready var mapa_a: TileMapLayer = $BackgroundCieloA
+@onready var mapa_b: TileMapLayer = $BackgroundCieloB
 @onready var player: CharacterBody2D = $"../../Player"
 
 
