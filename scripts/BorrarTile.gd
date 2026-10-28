@@ -10,9 +10,9 @@ func _ready():
 	if player == null:
 		return
 	sprites = [
-		get_node_or_null("/root/Game/UI/CanvasLayer/Sprite2D"),
+		get_node_or_null("/root/Game/UI/CanvasLayer/Sprite2D3"),
 		get_node_or_null("/root/Game/UI/CanvasLayer/Sprite2D2"),
-		get_node_or_null("/root/Game/UI/CanvasLayer/Sprite2D3")
+		get_node_or_null("/root/Game/UI/CanvasLayer/Sprite2D")
 	]
 
 func _input(event):
