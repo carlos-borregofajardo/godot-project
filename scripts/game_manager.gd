@@ -5,4 +5,7 @@ var score = 0
 
 func add_point():
 	score += 1
-	LabelContador.text = str(score) + " coins."
+	Datos.contador = score
+	LabelContador.text = str(score) + "/30 coins."
+	if score == 30:
+		Datos.terminar_partida()
