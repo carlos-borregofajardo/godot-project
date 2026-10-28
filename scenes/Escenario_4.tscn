@@ -419,6 +419,9 @@ position = Vector2(488, -24)
 [node name="Interruptor4" parent="Elementos/Interruptores" unique_id=342821730 instance=ExtResource("4_aamm7")]
 position = Vector2(296, 184)
 
+[node name="Interruptor5" parent="Elementos/Interruptores" unique_id=564281086 instance=ExtResource("4_aamm7")]
+position = Vector2(312, -264)
+
 [node name="Enemys" type="Node2D" parent="Elementos" unique_id=795885088]
 
 [node name="slime" parent="Elementos/Enemys" unique_id=2132902950 instance=ExtResource("2_s77ev")]
