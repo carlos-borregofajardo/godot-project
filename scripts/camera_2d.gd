@@ -11,4 +11,4 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	position.x += velocidad * delta * (1.0 + game_manager.score * 0.10)
 	position.y = $"../../Escenario/Player".position.y
-	label_vel_camara.text = str(snapped(velocidad * delta * (1.0 + game_manager.score * 0.15), 0.01)) + " camera speed"
+	label_vel_camara.text = str(snapped(velocidad * delta * (1.0 + game_manager.score * 0.15), 0.01)) + " Camera Speed."

@@ -35,8 +35,8 @@ func _physics_process(delta: float) -> void:
 	else:
 		animated_sprite_2d.play("jump")
 	if direction:
-		velocity.x = direction * SPEED * (1.0 + game_manager.score * 0.05)
-		label_vel_jugador.text = str(abs(velocity.x)) + " max player speed."
+		velocity.x = direction * SPEED * (1.0 + game_manager.score * 0.025)
+		label_vel_jugador.text = str(abs(velocity.x)) + " Max Player Speed."
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
