@@ -14,8 +14,14 @@ func formatear_tiempo(valor: float) -> String:
 		return "--:--:--:---"
 
 	var total_ms = int(valor * 1000.0)
+	
+	@warning_ignore("integer_division")
 	var horas = total_ms / 3600000
+	
+	@warning_ignore("integer_division")
 	var minutos = (total_ms / 60000) % 60
+	
+	@warning_ignore("integer_division")
 	var segundos = (total_ms / 1000) % 60
 	var ms = total_ms % 1000
 
