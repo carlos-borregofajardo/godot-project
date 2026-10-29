@@ -35,12 +35,10 @@ func terminar_partida() -> void:
 	if contador > mejor_contador:
 		mejor_contador = contador
 
-	get_tree().change_scene_to_file(
-		"res://scenes/pantalla_final.tscn"
-	)
+	get_tree().change_scene_to_file("res://scenes/pantalla_final.tscn")
 
-func completar_40_monedas() -> void:
-	# Menor tiempo para conseguir las 40 monedas
+func completar_30_monedas() -> void:
+	# Menor tiempo para conseguir las 30 monedas
 	if mejor_tiempo_30_monedas < 0 or tiempo < mejor_tiempo_30_monedas:
 		mejor_tiempo_30_monedas = tiempo
 
@@ -51,6 +49,4 @@ func completar_40_monedas() -> void:
 	Datos.contador = contador
 	Datos.tiempo = tiempo
 
-	get_tree().change_scene_to_file(
-		"res://scenes/pantalla_final.tscn"
-	)
+	get_tree().change_scene_to_file("res://scenes/pantalla_final.tscn")

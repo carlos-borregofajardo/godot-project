@@ -8,4 +8,4 @@ func add_point():
 	Datos.contador = score
 	LabelContador.text = str(score) + "/30 coins."
 	if score == 30:
-		Datos.terminar_partida()
+		Datos.completar_30_monedas()
