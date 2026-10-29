@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://s4bo6v7cl5as" path="res://scripts/h_slider.gd" id="5_1dnnl"]
 [ext_resource type="PackedScene" uid="uid://60srmp8f1guv" path="res://scenes/slime.tscn" id="5_1syfe"]
 [ext_resource type="Texture2D" uid="uid://if164twyddld" path="res://assets/sprites/Icono de volumen azul con ondas.png" id="6_3lovm"]
+[ext_resource type="Script" uid="uid://d2vrggqajj06d" path="res://scripts/hover_unhover.gd" id="6_xm7dd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8evkk"]
 texture = ExtResource("1_n8jvp")
@@ -281,6 +282,60 @@ texture = ExtResource("1_n8jvp")
 [sub_resource type="TileSet" id="TileSet_gqhdy"]
 sources/0 = SubResource("TileSetAtlasSource_rm883")
 
+[sub_resource type="Animation" id="Animation_2xgxd"]
+resource_name = "Hover"
+length = 0.15
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.15),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(2, 2), Vector2(2.2, 2.2)]
+}
+
+[sub_resource type="Animation" id="Animation_8k4fm"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2, 2)]
+}
+
+[sub_resource type="Animation" id="Animation_lgh5n"]
+resource_name = "Unhover"
+length = 0.15
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.15),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(2.2, 2.2), Vector2(2, 2)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vu7yk"]
+_data = {
+&"Hover": SubResource("Animation_2xgxd"),
+&"RESET": SubResource("Animation_8k4fm"),
+&"Unhover": SubResource("Animation_lgh5n")
+}
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mkvo7"]
 
 [node name="Node2D" type="Node2D" unique_id=1310147891]
@@ -308,10 +363,10 @@ position = Vector2(424, 560)
 script = ExtResource("2_fs0pn")
 
 [node name="LabelResultado" type="Label" parent="CanvasLayer" unique_id=1566995023]
-offset_left = 232.0
-offset_top = 136.0
-offset_right = 392.0
-offset_bottom = 181.0
+offset_left = 104.0
+offset_top = 120.0
+offset_right = 328.0
+offset_bottom = 165.0
 scale = Vector2(4, 4)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_342is")
@@ -372,16 +427,22 @@ theme_override_fonts/font = ExtResource("4_342is")
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="Play" type="Button" parent="CanvasLayer" unique_id=2078820699]
-offset_left = 416.00003
+[node name="Play" type="Button" parent="CanvasLayer" unique_id=950581170]
+custom_minimum_size = Vector2(0, 9.079)
+custom_maximum_size = Vector2(160, 48)
+offset_left = 496.0
 offset_top = 368.0
-offset_right = 504.00003
-offset_bottom = 400.0
-scale = Vector2(3, 3)
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+offset_right = 628.0
+offset_bottom = 416.0
+scale = Vector2(2, 2)
+pivot_offset = Vector2(80, 16)
 theme_override_fonts/font = ExtResource("4_342is")
+theme_override_font_sizes/font_size = 24
 text = "Replay"
-metadata/_edit_use_anchors_ = true
+script = ExtResource("6_xm7dd")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/Play" unique_id=1291827586]
+libraries/ = SubResource("AnimationLibrary_vu7yk")
 
 [node name="Exit" type="Button" parent="CanvasLayer" unique_id=849752041]
 modulate = Color(0, 0, 0, 1)
@@ -412,3 +473,6 @@ script = ExtResource("5_1dnnl")
 position = Vector2(104, 72)
 scale = Vector2(0.034, 0.034)
 texture = ExtResource("6_3lovm")
+
+[connection signal="mouse_entered" from="CanvasLayer/Play" to="CanvasLayer/Play" method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/Play" to="CanvasLayer/Play" method="_on_button_mouse_exited"]
