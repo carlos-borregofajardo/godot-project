@@ -373,10 +373,10 @@ position = Vector2(601, 23)
 position = Vector2(392, -72)
 
 [node name="coin6" parent="Elementos/Coins" unique_id=1547033482 instance=ExtResource("3_662dk")]
-position = Vector2(507, -120)
+position = Vector2(504, -120)
 
 [node name="coin7" parent="Elementos/Coins" unique_id=1625539526 instance=ExtResource("3_662dk")]
-position = Vector2(177, -32)
+position = Vector2(176, -40)
 
 [node name="coin8" parent="Elementos/Coins" unique_id=715095679 instance=ExtResource("3_662dk")]
 position = Vector2(440, 72)
@@ -388,10 +388,10 @@ position = Vector2(456, 72)
 position = Vector2(264, -232)
 
 [node name="coin11" parent="Elementos/Coins" unique_id=355061200 instance=ExtResource("3_662dk")]
-position = Vector2(408, -256)
+position = Vector2(408, -264)
 
 [node name="coin12" parent="Elementos/Coins" unique_id=418032940 instance=ExtResource("3_662dk")]
-position = Vector2(424, -256)
+position = Vector2(424, -264)
 
 [node name="coin13" parent="Elementos/Coins" unique_id=827676918 instance=ExtResource("3_662dk")]
 position = Vector2(88, 88)
@@ -408,7 +408,7 @@ position = Vector2(232, 136)
 [node name="Interruptores" type="Node2D" parent="Elementos" unique_id=1462898964]
 
 [node name="Interruptor" parent="Elementos/Interruptores" unique_id=1416980535 instance=ExtResource("4_aamm7")]
-position = Vector2(600, -96)
+position = Vector2(600, -104)
 
 [node name="Interruptor2" parent="Elementos/Interruptores" unique_id=1725916622 instance=ExtResource("4_aamm7")]
 position = Vector2(648, 40)

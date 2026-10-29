@@ -545,28 +545,28 @@ autoplay = &"movimiento"
 [node name="Coins" type="Node2D" parent="Elementos" unique_id=1213186699]
 
 [node name="coin" parent="Elementos/Coins" unique_id=882268808 instance=ExtResource("3_f57jn")]
-position = Vector2(141, -29)
+position = Vector2(152, -24)
 
 [node name="coin2" parent="Elementos/Coins" unique_id=407803531 instance=ExtResource("3_f57jn")]
-position = Vector2(141, 63)
+position = Vector2(152, 56)
 
 [node name="coin3" parent="Elementos/Coins" unique_id=1232782455 instance=ExtResource("3_f57jn")]
-position = Vector2(205.245, -29)
+position = Vector2(216, -24)
 
 [node name="coin4" parent="Elementos/Coins" unique_id=468421385 instance=ExtResource("3_f57jn")]
-position = Vector2(205.245, 63)
+position = Vector2(216, 56)
 
 [node name="coin5" parent="Elementos/Coins" unique_id=1998398131 instance=ExtResource("3_f57jn")]
-position = Vector2(380.945, -29)
+position = Vector2(392, -24)
 
 [node name="coin6" parent="Elementos/Coins" unique_id=1354132558 instance=ExtResource("3_f57jn")]
-position = Vector2(380.945, 63)
+position = Vector2(392, 56)
 
 [node name="coin7" parent="Elementos/Coins" unique_id=959800393 instance=ExtResource("3_f57jn")]
-position = Vector2(445.67, -29)
+position = Vector2(456, -24)
 
 [node name="coin8" parent="Elementos/Coins" unique_id=1625162257 instance=ExtResource("3_f57jn")]
-position = Vector2(445.67, 63)
+position = Vector2(456, 56)
 
 [node name="Interruptores" type="Node2D" parent="Elementos" unique_id=726277724]
 

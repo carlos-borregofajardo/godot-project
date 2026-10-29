@@ -358,22 +358,28 @@ tile_set = SubResource("TileSet_l8oat")
 [node name="Coins" type="Node2D" parent="Elementos" unique_id=13009422]
 
 [node name="coin" parent="Elementos/Coins" unique_id=882268808 instance=ExtResource("3_6oec2")]
-position = Vector2(58, -25)
+position = Vector2(56, -24)
 
 [node name="coin2" parent="Elementos/Coins" unique_id=1143144331 instance=ExtResource("3_6oec2")]
 position = Vector2(248, -24)
 
 [node name="coin3" parent="Elementos/Coins" unique_id=178822331 instance=ExtResource("3_6oec2")]
-position = Vector2(413, -22)
+position = Vector2(408, -24)
 
 [node name="coin4" parent="Elementos/Coins" unique_id=566235114 instance=ExtResource("3_6oec2")]
-position = Vector2(432, -22)
+position = Vector2(424, -24)
 
 [node name="coin5" parent="Elementos/Coins" unique_id=2139907412 instance=ExtResource("3_6oec2")]
-position = Vector2(450, -22)
+position = Vector2(440, -24)
 
 [node name="coin6" parent="Elementos/Coins" unique_id=2131802301 instance=ExtResource("3_6oec2")]
-position = Vector2(475, -109)
+position = Vector2(472, -104)
+
+[node name="coin7" parent="Elementos/Coins" unique_id=497629108 instance=ExtResource("3_6oec2")]
+position = Vector2(120, -104)
+
+[node name="coin8" parent="Elementos/Coins" unique_id=576590980 instance=ExtResource("3_6oec2")]
+position = Vector2(200, -104)
 
 [node name="Interruptores" type="Node2D" parent="Elementos" unique_id=352827517]
 
