@@ -288,7 +288,7 @@ position = Vector2(8, 16)
 [node name="killzone" parent="Escenario" unique_id=1646663583 instance=ExtResource("5_iywne")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Escenario/killzone" unique_id=972328023]
-position = Vector2(0, 368)
+position = Vector2(0, 360)
 shape = SubResource("WorldBoundaryShape2D_mjkrw")
 
 [node name="Elementos" type="Node2D" parent="Escenario" unique_id=1522191517]
